@@ -11,7 +11,7 @@ import torch
 import torchvision
 
 model = torchvision.models.resnet18()
-model.load_state_dict(torch.load('path_to_checkpoint.pth'))
+model.load_state_dict(torch.load('path_to_checkpoint.pth'), strict=False)
 ```
 
 ## Checkpoints
