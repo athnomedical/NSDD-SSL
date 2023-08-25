@@ -11,7 +11,9 @@ import torch
 import torchvision
 
 model = torchvision.models.resnet18()
-model.load_state_dict(torch.load('path_to_checkpoint.pth'), strict=False)
+unused_key = ('fc.weight', 'fc.bias')
+state_dict = {k:v for k, v in torch.load('path_to_checkpoint.pth').items() if k not in unused_key}
+model.load_state_dict(state_dict, strict=False)
 ```
 
 ## Checkpoints
