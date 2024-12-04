@@ -15,24 +15,24 @@ unused_key = ('fc.weight', 'fc.bias')
 state_dict = {k: v for k, v in torch.load('path_to_checkpoint.pth').items() if k not in unused_key}
 model.load_state_dict(state_dict, strict=False)
 ```
-For ResNet-50, replace `torchvision.models.resnet18()` with `torchvision.models.resnet50()` 
+For ResNet-50, replace `torchvision.models.resnet18()` with `torchvision.models.resnet50()`
 
 ## Checkpoints
 
 | Model     | Pre-training Method                           | Image Data Used for Pre-training | Download                                             |
 | --------- | --------------------------------------------- | -------------------------------- | ---------------------------------------------------- |
-| ResNet-18 | Self-supervised method (SimCLR)               | NSDD-unlabeled                   | [checkpoint](./checkpoints/SimCLR_pretrained.pth)    |
-| ResNet-18 | Self-supervised method (BYOL)                 | NSDD-unlabeled                   | [checkpoint](./checkpoints/BYOL_pretrained.pth)      |
-| ResNet-18 | Self-supervised method (DINO)                 | NSDD-unlabeled                   | [checkpoint](./checkpoints/DINO_pretrained.pth)      |
-| ResNet-18 | Self-supervised method (SimCLR) + fine-tuning | NSDD-unlabeled + NSDD-labeled    | [checkpoint](./checkpoints/SimCLR_SL_pretrained.pth) |
-| ResNet-18 | Self-supervised method (BYOL) + fine-tuning   | NSDD-unlabeled + NSDD-labeled    | [checkpoint](./checkpoints/BYOL_SL_pretrained.pth)   |
-| ResNet-18 | Self-supervised method (DINO) + fine-tuning   | NSDD-unlabeled + NSDD-labeled    | [checkpoint](./checkpoints/DINO_SL_pretrained.pth)   |
+| ResNet-18 | Self-supervised method (SimCLR)               | NSDD-unlabeled                   | [checkpoint](./checkpoints/ResNet18_SimCLR.pth)    |
+| ResNet-18 | Self-supervised method (BYOL)                 | NSDD-unlabeled                   | [checkpoint](./checkpoints/ResNet18_BYOL.pth)      |
+| ResNet-18 | Self-supervised method (DINO)                 | NSDD-unlabeled                   | [checkpoint](./checkpoints/ResNet18_DINO.pth)      |
+| ResNet-18 | Self-supervised method (SimCLR) + fine-tuning | NSDD-unlabeled + NSDD-labeled    | [checkpoint](./checkpoints/ResNet18_SimCLR_finetuned_with_NSDD-labeled.pth) |
+| ResNet-18 | Self-supervised method (BYOL) + fine-tuning   | NSDD-unlabeled + NSDD-labeled    | [checkpoint](./checkpoints/ResNet18_BYOL_finetuned_with_NSDD-labeled.pth)   |
+| ResNet-18 | Self-supervised method (DINO) + fine-tuning   | NSDD-unlabeled + NSDD-labeled    | [checkpoint](./checkpoints/ResNet18_DINO_finetuned_with_NSDD-labeled.pth)   |
 | ResNet-50 | Self-supervised method (SimCLR)               | NSDD-unlabeled                   | Under preparation                                                      |
 | ResNet-50 | Self-supervised method (BYOL)                 | NSDD-unlabeled                   | Under preparation                                    |
 | ResNet-50 | Self-supervised method (DINO)                 | NSDD-unlabeled                   | Under preparation                                    |
-| ResNet-50 | Self-supervised method (SimCLR) + fine-tuning | NSDD-unlabeled + NSDD-labeled    | [checkpoint](./checkpoints/SimCLR_SL_pretrained.pth) |
-| ResNet-50 | Self-supervised method (BYOL) + fine-tuning   | NSDD-unlabeled + NSDD-labeled    | [checkpoint](./checkpoints/BYOL_SL_pretrained.pth)   |
-| ResNet-50 | Self-supervised method (DINO) + fine-tuning   | NSDD-unlabeled + NSDD-labeled    | [checkpoint](./checkpoints/DINO_SL_pretrained.pth)   |
+| ResNet-50 | Self-supervised method (SimCLR) + fine-tuning | NSDD-unlabeled + NSDD-labeled    | [checkpoint](./checkpoints/ResNet50_SimCLR_finetuned_with_NSDD-labeled.pth) |
+| ResNet-50 | Self-supervised method (BYOL) + fine-tuning   | NSDD-unlabeled + NSDD-labeled    | [checkpoint](./checkpoints/ResNet50_BYOL_finetuned_with_NSDD-labeled.pth)   |
+| ResNet-50 | Self-supervised method (DINO) + fine-tuning   | NSDD-unlabeled + NSDD-labeled    | [checkpoint](./checkpoints/ResNet50_DINO_finetuned_with_NSDD-labeled.pth)   |
 
 
 ## License
